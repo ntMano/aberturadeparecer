@@ -1,0 +1,704 @@
+<!DOCTYPE html>
+<html>
+
+<head></head>
+
+<body>
+    <div>
+        <p style="margin: left 0; text-align:center"><img
+                src="data:image/jpg;base64,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">
+        </p>
+
+        <p style="margin-left:0; text-align:center"><strong> ANOTAÇÃO DE RESPONSABILIDADE
+                TÉCNICA</strong></p>
+        <p style="margin-left:35.05pt; text-align:left"><strong>Nº Parecer: {PARECER}/{ANO}</strong></p>
+
+        <p style="margin-left:35.05pt; text-align:left"><strong>Data da entrega dos
+                documentos: {DATA}</strong></p>
+
+        <p style="margin-left:35.05pt; text-align:left"><strong>RT
+                solicitante: {ENF_REQUERENTE}
+            </strong>
+        </p>
+
+        <p style="margin-left:35.05pt; text-align:left"><strong>
+                Nº COREN: {COREN}</strong></p>
+
+
+        <p style="margin-left:35.05pt; text-align:left"><strong>
+                Empresa: {EMPRESA}
+            </strong>
+        </p>
+        <p style="margin-left:35.05pt; text-align:left"><strong>
+                Setor/polo de atuação do RT (se houver):
+            </strong>
+        </p>
+
+        <p style="margin-left:35.05pt; text-align:justify"><strong>PJ: {PJ}
+            </strong>
+        </p>
+
+        <p style="margin-left:35.05pt; text-align:justify"><strong>
+                CNPJ: {CNPJ}
+            </strong>
+        </p>
+
+        <p style="margin-left:35.05pt; text-align:justify"><strong>Município: {MUNICIPIO}</strong></p>
+
+        <p style="margin-left:35.05pt; text-align:justify"><strong>
+                TIPO DE SOLICITAÇÃO: {CHECK}
+            </strong>
+        </p>
+
+        <p style="margin-left:14pt; text-align:justify"><img
+                src="file:///C:/Users/MANOEL~1/AppData/Local/Temp/msohtmlclip1/01/clip_image004.gif"
+                style="height:17px; width:20px"></p>
+
+        <p style="text-align:justify"></p>
+
+        <table border="1" cellpadding="0" cellspacing="0">
+            <tbody>
+                <tr>
+                    <td style="height:28px; width:48px">
+                        <p style="margin-left:17.5pt; text-align:justify"><strong>Nº</strong></p>
+                    </td>
+                    <td colspan="2" style="height:28px; width:491px">
+                        <p style="margin-left:38.05pt; text-align:justify"><strong>ANÁLISE PARA ADMISSÃO DE
+                                DOCUMENTAÇÃO PARA ART</strong></p>
+                    </td>
+                    <td style="height:28px; width:38px">
+                        <p style="margin-left:5.85pt; text-align:justify"><strong>Sim</strong></p>
+                    </td>
+                    <td style="height:28px; width:38px">
+                        <p style="margin-left:6pt; text-align:justify"><strong>Não</strong></p>
+                    </td>
+                    <td style="height:28px; width:57px">
+                        <p style="margin-left:7.75pt; text-align:justify"><strong>Não se aplica</strong></p>
+                    </td>
+                </tr>
+                <tr>
+                    <td style="height:16px; width:48px">
+                        <p style="margin-left:11.1pt; text-align:justify"><strong>1.</strong></p>
+                    </td>
+                    <td colspan="2" style="height:16px; width:491px">
+                        <p style="margin-left:11.15pt; text-align:justify">Requerimento para ART preenchido e assinado
+                        </p>
+                    </td>
+                    <td style="height:16px; width:38px">
+                        <p style="text-align:justify"></p>
+                    </td>
+                    <td style="height:16px; width:38px">
+                        <p style="text-align:justify"></p>
+                    </td>
+                    <td style="height:16px; width:57px">
+                        <p style="text-align:justify"></p>
+                    </td>
+                </tr>
+                <tr>
+                    <td style="height:30px; width:48px">
+                        <p style="margin-left:11.1pt; text-align:justify">1.1</p>
+                    </td>
+                    <td colspan="2" style="height:30px; width:491px">
+                        <p style="margin-left:11.15pt; text-align:justify">Dados da empresa apresentados no requerimento
+                            (cnpj, endereço...) coferem com os</p>
+
+                        <p style="margin-left:11.15pt; text-align:justify">dados do INCORP</p>
+                    </td>
+                    <td style="height:30px; width:38px">
+                        <p style="text-align:justify"></p>
+                    </td>
+                    <td style="height:30px; width:38px">
+                        <p style="text-align:justify"></p>
+                    </td>
+                    <td style="height:30px; width:57px">
+                        <p style="text-align:justify"></p>
+                    </td>
+                </tr>
+                <tr>
+                    <td style="height:30px; width:48px">
+                        <p style="margin-left:11.1pt; text-align:justify">1.2</p>
+                    </td>
+                    <td colspan="2" style="height:30px; width:491px">
+                        <p style="margin-left:11.15pt; text-align:justify">Carga Horária do RT compatível para
+                            a função (verificar, no INCORP, se o enfermeiro</p>
+
+                        <p style="margin-left:11.15pt; text-align:justify">possui outra ART com horário
+                            compatível)</p>
+                    </td>
+                    <td style="height:30px; width:38px">
+                        <p style="text-align:justify"></p>
+                    </td>
+                    <td style="height:30px; width:38px">
+                        <p style="text-align:justify"></p>
+                    </td>
+                    <td style="height:30px; width:57px">
+                        <p style="text-align:justify"></p>
+                    </td>
+                </tr>
+                <tr>
+                    <td style="height:16px; width:48px">
+                        <p style="margin-left:11.1pt; text-align:justify">1.3</p>
+                    </td>
+                    <td colspan="2" style="height:16px; width:491px">
+                        <p style="margin-left:11.15pt; text-align:justify">Não coincidência de horário
+                            de RT nas empresas/instituições</p>
+                    </td>
+                    <td style="height:16px; width:38px">
+                        <p style="text-align:justify"></p>
+                    </td>
+                    <td style="height:16px; width:38px">
+                        <p style="text-align:justify"></p>
+                    </td>
+                    <td style="height:16px; width:57px">
+                        <p style="text-align:justify"></p>
+                    </td>
+                </tr>
+                <tr>
+                    <td style="height:15px; width:48px">
+                        <p style="margin-left:11pt; text-align:justify"><strong>2.</strong></p>
+                    </td>
+                    <td colspan="2" style="height:15px; width:491px">
+                        <p style="margin-left:11.15pt; text-align:justify">Cópia do cartão do CNPJ da
+                            empresa/instituição</p>
+                    </td>
+                    <td style="height:15px; width:38px">
+                        <p style="text-align:justify"></p>
+                    </td>
+                    <td style="height:15px; width:38px">
+                        <p style="text-align:justify"></p>
+                    </td>
+                    <td style="height:15px; width:57px">
+                        <p style="text-align:justify"></p>
+                    </td>
+                </tr>
+                <tr>
+                    <td style="height:15px; width:48px">
+                        <p style="margin-left:11pt; text-align:justify"><strong>3.</strong></p>
+                    </td>
+                    <td colspan="2" style="height:15px; width:491px">
+                        <p style="margin-left:11.15pt; text-align:justify">Cópia da carteira do Coren-MA do
+                            Enfermeiro RT dentro da validade</p>
+                    </td>
+                    <td style="height:15px; width:38px">
+                        <p style="text-align:justify"></p>
+                    </td>
+                    <td style="height:15px; width:38px">
+                        <p style="text-align:justify"></p>
+                    </td>
+                    <td style="height:15px; width:57px">
+                        <p style="text-align:justify"></p>
+                    </td>
+                </tr>
+                <tr>
+                    <td style="height:15px; width:48px">
+                        <p style="margin-left:11pt; text-align:justify"><strong>4.</strong></p>
+                    </td>
+                    <td colspan="2" style="height:15px; width:491px">
+                        <p style="margin-left:11.15pt; text-align:justify">Comprovação do vínculo
+                            empregatício do RT com a Empresa/Instituição</p>
+                    </td>
+                    <td style="height:15px; width:38px">
+                        <p style="text-align:justify"></p>
+                    </td>
+                    <td style="height:15px; width:38px">
+                        <p style="text-align:justify"></p>
+                    </td>
+                    <td style="height:15px; width:57px">
+                        <p style="text-align:justify"></p>
+                    </td>
+                </tr>
+                <tr>
+                    <td style="height:15px; width:48px">
+                        <p style="margin-left:11pt; text-align:justify"><strong>5.</strong></p>
+                    </td>
+                    <td colspan="2" style="height:15px; width:491px">
+                        <p style="margin-left:11.15pt; text-align:justify">Cópia do Certificado de Filantropia
+                            (CEBAS) para isenção da taxa da CRT</p>
+                    </td>
+                    <td style="height:15px; width:38px">
+                        <p style="text-align:justify"></p>
+                    </td>
+                    <td style="height:15px; width:38px">
+                        <p style="text-align:justify"></p>
+                    </td>
+                    <td style="height:15px; width:57px">
+                        <p style="text-align:justify"></p>
+                    </td>
+                </tr>
+                <tr>
+                    <td style="height:28px; width:48px">
+                        <p style="margin-left:11pt; text-align:justify"><strong>6.</strong></p>
+                    </td>
+                    <td colspan="2" style="height:28px; width:491px">
+                        <p style="margin-left:11.15pt; text-align:justify">Enfermeiro RT requerente quite com as suas
+                            obrigações eleitorais com o Coren-MA, bem como com suas anuidades, <strong>em
+                                todas as categorias em que estiver inscrito.</strong></p>
+                    </td>
+                    <td style="height:28px; width:38px">
+                        <p style="text-align:justify"></p>
+                    </td>
+                    <td style="height:28px; width:38px">
+                        <p style="text-align:justify"></p>
+                    </td>
+                    <td style="height:28px; width:57px">
+                        <p style="text-align:justify"></p>
+                    </td>
+                </tr>
+                <tr>
+                    <td style="height:15px; width:48px">
+                        <p style="margin-left:11pt; text-align:justify"><strong>7.</strong></p>
+                    </td>
+                    <td colspan="2" style="height:15px; width:491px">
+                        <p style="margin-left:11.15pt; text-align:justify">Listagem dos profissionais de enfermagem
+                            assinada
+                            ou declaração assinada</p>
+                    </td>
+                    <td style="height:15px; width:38px">
+                        <p style="text-align:justify"></p>
+                    </td>
+                    <td style="height:15px; width:38px">
+                        <p style="text-align:justify"></p>
+                    </td>
+                    <td style="height:15px; width:57px">
+                        <p style="text-align:justify"></p>
+                    </td>
+                </tr>
+                <tr>
+                    <td style="height:21px; width:48px">
+                        <p style="margin-left:11pt; text-align:justify">7.1</p>
+                    </td>
+                    <td colspan="2" style="height:21px; width:491px">
+                        <p style="margin-left:11.15pt; text-align:justify">Listagem contendo minimamente: nome, nº de
+                            inscrição no Coren-MA e cargo/função</p>
+                    </td>
+                    <td style="height:21px; width:38px">
+                        <p style="text-align:justify"></p>
+                    </td>
+                    <td style="height:21px; width:38px">
+                        <p style="text-align:justify"></p>
+                    </td>
+                    <td style="height:21px; width:57px">
+                        <p style="text-align:justify"></p>
+                    </td>
+                </tr>
+                <tr>
+                    <td style="height:21px; width:48px">
+                        <p style="margin-left:11pt; text-align:justify">8.</p>
+                    </td>
+                    <td colspan="2" style="height:21px; width:491px">
+                        <p style="margin-left:11.15pt; text-align:justify">Cópia do(s) instrumento(s) de
+                            alteração, em caso de alteração de dados.</p>
+                    </td>
+                    <td style="height:21px; width:38px">
+                        <p style="text-align:justify"></p>
+                    </td>
+                    <td style="height:21px; width:38px">
+                        <p style="text-align:justify"></p>
+                    </td>
+                    <td style="height:21px; width:57px">
+                        <p style="text-align:justify"></p>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="6" style="height:15px; width:671px">
+                        <p style="text-align:justify"></p>
+                    </td>
+                </tr>
+                <tr>
+                    <td style="height:28px; width:48px">
+                        <p style="margin-left:13.3pt; text-align:justify"><strong>Nº</strong></p>
+                    </td>
+                    <td colspan="2" style="height:28px; width:491px">
+                        <p style="margin-left:68.4pt; text-align:justify"><strong>OUTRAS ANÁLISES PÓS
+                                RECEBIMENTO</strong></p>
+                    </td>
+                    <td style="height:28px; width:38px">
+                        <p style="margin-left:5.85pt; text-align:justify"><strong>Sim</strong></p>
+                    </td>
+                    <td style="height:28px; width:38px">
+                        <p style="margin-left:6pt; text-align:justify"><strong>Não</strong></p>
+                    </td>
+                    <td style="height:28px; width:57px">
+                        <p style="margin-left:7.75pt; text-align:justify"><strong>Não se aplica</strong></p>
+                    </td>
+                </tr>
+                <tr>
+                    <td style="height:15px; width:48px">
+                        <p style="margin-left:11pt; text-align:justify"><strong>1.</strong></p>
+                    </td>
+                    <td colspan="2" style="height:15px; width:491px">
+                        <p style="margin-left:11.15pt; text-align:justify">Taxa de ART paga</p>
+                    </td>
+                    <td style="height:15px; width:38px">
+                        <p style="text-align:justify"></p>
+                    </td>
+                    <td style="height:15px; width:38px">
+                        <p style="text-align:justify"></p>
+                    </td>
+                    <td style="height:15px; width:57px">
+                        <p style="text-align:justify"></p>
+                    </td>
+                </tr>
+                <tr>
+                    <td style="height:15px; width:48px">
+                        <p style="margin-left:11pt; text-align:justify"><strong>2.</strong></p>
+                    </td>
+                    <td colspan="2" style="height:15px; width:491px">
+                        <p style="margin-left:11.15pt; text-align:justify">Profissional adimplente na entrega da CRT?
+                        </p>
+                    </td>
+                    <td style="height:15px; width:38px">
+                        <p style="text-align:justify"></p>
+                    </td>
+                    <td style="height:15px; width:38px">
+                        <p style="text-align:justify"></p>
+                    </td>
+                    <td style="height:15px; width:57px">
+                        <p style="text-align:justify"></p>
+                    </td>
+                </tr>
+                <tr>
+                    <td style="height:15px; width:48px">
+                        <p style="margin-left:11pt; text-align:justify"><strong>3.</strong></p>
+                    </td>
+                    <td colspan="2" style="height:15px; width:491px">
+                        <p style="margin-left:11.15pt; text-align:justify">Há solicitação de
+                            cancelamento quando da confecção e envio da CRT.</p>
+                    </td>
+                    <td style="height:15px; width:38px">
+                        <p style="text-align:justify"></p>
+                    </td>
+                    <td style="height:15px; width:38px">
+                        <p style="text-align:justify"></p>
+                    </td>
+                    <td style="height:15px; width:57px">
+                        <p style="text-align:justify"></p>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="6" style="height:18px; width:671px">
+                        <p style="text-align:justify"></p>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2" style="height:19px; width:75px">
+                        <p style="margin-left:15.7pt; text-align:justify"><strong>DATA</strong></p>
+                    </td>
+                    <td colspan="2" style="height:19px; width:501px">
+                        <p style="margin-left:104.15pt; text-align:justify"><strong>CONDUTA</strong></p>
+                    </td>
+                    <td colspan="2" style="height:19px; width:95px">
+                        <p style="margin-left:5.9pt; text-align:justify"><strong>ASSINATURA</strong></p>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2" style="height:19px; width:75px">
+                        <p style="text-align:justify"></p>
+                    </td>
+                    <td colspan="2" style="height:19px; width:501px">
+                        <p style="margin-left:9.4pt; text-align:justify">Documentação recebida e admitida.</p>
+                    </td>
+                    <td colspan="2" style="height:19px; width:95px">
+                        <p style="text-align:justify"></p>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2" style="height:19px; width:75px">
+                        <p style="text-align:justify"></p>
+                    </td>
+                    <td colspan="2" style="height:19px; width:501px">
+                        <p style="margin-left:7.1pt; text-align:justify">Enviado boleto referente à taxa de ART.
+                            Aguardando pagamento.</p>
+                    </td>
+                    <td colspan="2" style="height:19px; width:95px">
+                        <p style="text-align:justify"></p>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2" style="height:18px; width:75px">
+                        <p style="text-align:justify"></p>
+                    </td>
+                    <td colspan="2" style="height:18px; width:501px">
+                        <p style="margin-left:7.1pt; text-align:justify">Taxa de ART paga.</p>
+                    </td>
+                    <td colspan="2" style="height:18px; width:95px">
+                        <p style="text-align:justify"></p>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2" style="height:17px; width:75px">
+                        <p style="text-align:justify"></p>
+                    </td>
+                    <td colspan="2" style="height:17px; width:501px">
+                        <p style="margin-left:7.1pt; text-align:justify">Encaminhado à coordenação do
+                            DFIS para providências.</p>
+                    </td>
+                    <td colspan="2" style="height:17px; width:95px">
+                        <p style="text-align:justify"></p>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2" style="height:19px; width:75px">
+                        <p style="text-align:justify"></p>
+                    </td>
+                    <td colspan="2" style="height:19px; width:501px">
+                        <p style="margin-left:7.1pt; text-align:justify">Encaminhado à Presidência para
+                            apreciação e homologação.</p>
+                    </td>
+                    <td colspan="2" style="height:19px; width:95px">
+                        <p style="text-align:justify"></p>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2" style="height:18px; width:75px">
+                        <p style="text-align:justify"></p>
+                    </td>
+                    <td colspan="2" style="height:18px; width:501px">
+                        <p style="margin-left:7.1pt; text-align:justify">Recebido da Presidência.</p>
+                    </td>
+                    <td colspan="2" style="height:18px; width:95px">
+                        <p style="text-align:justify"></p>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2" style="height:19px; width:75px">
+                        <p style="text-align:justify"></p>
+                    </td>
+                    <td colspan="2" style="height:19px; width:501px">
+                        <p style="margin-left:7.1pt; text-align:justify">Pendência financeira detectada.</p>
+                    </td>
+                    <td colspan="2" style="height:19px; width:95px">
+                        <p style="text-align:justify"></p>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2" style="height:18px; width:75px">
+                        <p style="text-align:justify"></p>
+                    </td>
+                    <td colspan="2" style="height:18px; width:501px">
+                        <p style="margin-left:7.1pt; text-align:justify">Confecção/entrega da CRT</p>
+                    </td>
+                    <td colspan="2" style="height:18px; width:95px">
+                        <p style="text-align:justify"></p>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2" style="height:19px; width:75px">
+                        <p style="text-align:justify"></p>
+                    </td>
+                    <td colspan="2" style="height:19px; width:501px">
+                        <p style="margin-left:7.1pt; text-align:justify">Arquivamento da documentação.</p>
+                    </td>
+                    <td colspan="2" style="height:19px; width:95px">
+                        <p style="text-align:justify"></p>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2" style="height:19px; width:75px">
+                        <p style="text-align:justify"></p>
+                    </td>
+                    <td colspan="2" style="height:19px; width:501px">
+                        <p style="margin-left:7.1pt; text-align:justify">Solicitação de cancelamento recebida.
+                        </p>
+                    </td>
+                    <td colspan="2" style="height:19px; width:95px">
+                        <p style="text-align:justify"></p>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2" style="height:19px; width:75px">
+                        <p style="text-align:justify"></p>
+                    </td>
+                    <td colspan="2" style="height:19px; width:501px">
+                        <p style="margin-left:7.1pt; text-align:justify">Encaminhado à coordenação do
+                            DFIS para providências.</p>
+                    </td>
+                    <td colspan="2" style="height:19px; width:95px">
+                        <p style="text-align:justify"></p>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2" style="height:19px; width:75px">
+                        <p style="text-align:justify"></p>
+                    </td>
+                    <td colspan="2" style="height:19px; width:501px">
+                        <p style="margin-left:7.1pt; text-align:justify">Encaminhado à Presidência para
+                            apreciação e homologação.</p>
+                    </td>
+                    <td colspan="2" style="height:19px; width:95px">
+                        <p style="text-align:justify"></p>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2" style="height:19px; width:75px">
+                        <p style="text-align:justify"></p>
+                    </td>
+                    <td colspan="2" style="height:19px; width:501px">
+                        <p style="margin-left:7.1pt; text-align:justify">Recebido da Presidência.</p>
+                    </td>
+                    <td colspan="2" style="height:19px; width:95px">
+                        <p style="text-align:justify"></p>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2" style="height:27px; width:75px">
+                        <p style="text-align:justify"></p>
+                    </td>
+                    <td colspan="2" style="height:27px; width:501px">
+                        <p style="margin-left:7.1pt; text-align:justify">Realizado procedimentos para cancelamento de
+                            ART.
+                            Comunicado ao (a) enfermeiro(a) e/ou empresa</p>
+
+                        <p style="margin-left:7.1pt; text-align:justify">requerente.</p>
+                    </td>
+                    <td colspan="2" style="height:27px; width:95px">
+                        <p style="text-align:justify"></p>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2" style="height:19px; width:75px">
+                        <p style="text-align:justify"></p>
+                    </td>
+                    <td colspan="2" style="height:19px; width:501px">
+                        <p style="margin-left:7.1pt; text-align:justify">Arquivamento da documentação.</p>
+                    </td>
+                    <td colspan="2" style="height:19px; width:95px">
+                        <p style="text-align:justify"></p>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="6" style="height:27px; width:671px">
+                        <p style="text-align:justify"></p>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2" style="height:27px; width:75px">
+                        <p style="margin-left:15.45pt; text-align:justify"><strong>DATA</strong></p>
+                    </td>
+                    <td colspan="2" style="height:27px; width:501px">
+                        <p style="margin-left:104.15pt; text-align:justify"><strong>OUTRAS CONDUTAS /
+                                OBSERVAÇÕES</strong></p>
+                    </td>
+                    <td colspan="2" style="height:27px; width:95px">
+                        <p style="margin-left:6.35pt; text-align:justify"><strong>ASSINATURA</strong></p>
+                    </td>
+                </tr>
+                <tr>
+                    <td style="text-align:justify"></td>
+                    <td style="text-align:justify"></td>
+                    <td style="text-align:justify"></td>
+                    <td style="text-align:justify"></td>
+                    <td style="text-align:justify"></td>
+                    <td style="text-align:justify"></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <p style="text-align:justify"></p>
+
+    <table border="1" cellpadding="0" cellspacing="0">
+        <tbody>
+            <tr>
+                <td style="height:27px; width:76px">
+                    <p style="text-align:justify"></p>
+                </td>
+                <td style="height:27px; width:501px">
+                    <p style="text-align:justify"></p>
+                </td>
+                <td style="height:27px; width:95px">
+                    <p style="text-align:justify"></p>
+                </td>
+            </tr>
+            <tr>
+                <td style="height:27px; width:76px">
+                    <p style="text-align:justify"></p>
+                </td>
+                <td style="height:27px; width:501px">
+                    <p style="text-align:justify"></p>
+                </td>
+                <td style="height:27px; width:95px">
+                    <p style="text-align:justify"></p>
+                </td>
+            </tr>
+            <tr>
+                <td style="height:27px; width:76px">
+                    <p style="text-align:justify"></p>
+                </td>
+                <td style="height:27px; width:501px">
+                    <p style="text-align:justify"></p>
+                </td>
+                <td style="height:27px; width:95px">
+                    <p style="text-align:justify"></p>
+                </td>
+            </tr>
+            <tr>
+                <td style="height:27px; width:76px">
+                    <p style="text-align:justify"></p>
+                </td>
+                <td style="height:27px; width:501px">
+                    <p style="text-align:justify"></p>
+                </td>
+                <td style="height:27px; width:95px">
+                    <p style="text-align:justify"></p>
+                </td>
+            </tr>
+            <tr>
+                <td style="height:27px; width:76px">
+                    <p style="text-align:justify"></p>
+                </td>
+                <td style="height:27px; width:501px">
+                    <p style="text-align:justify"></p>
+                </td>
+                <td style="height:27px; width:95px">
+                    <p style="text-align:justify"></p>
+                </td>
+            </tr>
+            <tr>
+                <td style="height:27px; width:76px">
+                    <p style="text-align:justify"></p>
+                </td>
+                <td style="height:27px; width:501px">
+                    <p style="text-align:justify"></p>
+                </td>
+                <td style="height:27px; width:95px">
+                    <p style="text-align:justify"></p>
+                </td>
+            </tr>
+            <tr>
+                <td style="height:27px; width:76px">
+                    <p style="text-align:justify"></p>
+                </td>
+                <td style="height:27px; width:501px">
+                    <p style="text-align:justify"></p>
+                </td>
+                <td style="height:27px; width:95px">
+                    <p style="text-align:justify"></p>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+
+    <p style="text-align:justify"></p>
+
+    <p style="margin-left:7.75pt; text-align:justify"><strong>Uso exclusivo de funcionários do COREN-MA</strong></p>
+
+    <p style="margin-left:7.65pt; text-align:justify">Registro anotado no livro
+        nº
+        ,
+        fls.
+        sob o nº
+        COREN-MA
+        de ART. Validade:
+        /
+        /<u> ; </u>DATA DA
+        1º ART
+        / /<u>
+        </u></p>
+
+
+
+
+</body>
+
+</html>
